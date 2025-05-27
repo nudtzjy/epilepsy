@@ -1,0 +1,21 @@
+dataSplit:
+  train_portion: 0.9
+  valid_portion: 0.1
+  test_portion: 0
+
+dataConfig:
+  random_seed: 715
+  need_length: 100
+  episy_select_num: 1000
+  nonepisy_select_num: 2000
+  finetune_select_num_1: 20000
+  finetune_select_num_0: 20000
+  finetune_select_num: 20000
+  stride_0: 5
+  stride_1: 1
+
+
+dataPath:
+  feature_folder: /DATA/zhangjunyang/myDataset/Episy-model/data/up/train/
+  processed_path: /DATA/zhangjunyang/myDataset/Episy-model/data/processed/
+
