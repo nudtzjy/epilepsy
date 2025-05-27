@@ -13,7 +13,7 @@
 7.**requirements.txt** 项目中使用到的一些环境和依赖。  
 
 
-加载论文中训练好的模型进行推理的脚本,阈值需要根据模型检测结果进行调整。  
+加载论文中训练好的模型进行推理的脚本,阈值需要根据模型检测结果进行调整。注意：考虑到推理的时候需要根据窗口长度对原始输入文件进行切片，为了加快计算（复用切片数据，避免跑每个阈值都要重新切片一次原始数据），推理代码中阈值的设置通过代码中修改列表的方式进行，暂时没有使用外部传参的方式。  
 
 ```
 python epilepsy_svt_tfs_infer_args.py --threshold 0.6 --stride 5 --device cuda:0 --infer_ckpt data/ckpt/epoch_0_val_acc_0.997500000_model.pth --infer_input_path data/infer/PTX_CA3_U20130429_15_ch9-16_convert.mat
