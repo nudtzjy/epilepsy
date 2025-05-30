@@ -57,3 +57,6 @@ python epilepsy_svt_tfs_infer_args.py --threshold 0.6 --stride 5 --device cuda:0
 ```
 **注意**：考虑到推理的时候需要根据窗口长度对原始输入文件进行切片，为了加快计算（复用切片数据，避免跑每个阈值都要重新切片一次原始数据），推理代码中阈值的设置通过代码中修改列表的方式进行，暂时没有使用外部传参的方式。
 
+论文中使用到的相关模型和数据请访问百度网盘：
+https://pan.baidu.com/s/1Afv3nlcWarNXwJCN683Yeg?pwd=pbd3
+
